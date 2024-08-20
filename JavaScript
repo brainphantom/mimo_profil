@@ -1,0 +1,15 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const linkContainers = document.querySelectorAll('.link-container');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
+    linkContainers.forEach(container => {
+        observer.observe(container);
+    });
+});
