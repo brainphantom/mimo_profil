@@ -14,8 +14,13 @@ I am very active on Discord and I enjoy helping people. :)
 My links🔗 ↓
 
 GitHub
+
 Discord
+
 Hashnode
+
 YouTube
+
 replit
+
 Mail Address → yotop33@gmx.fr
