@@ -1,6 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const menuIcon = document.querySelector('.menu-icon');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
     const linkContainers = document.querySelectorAll('.link-container');
 
+    // Toggle dropdown menu visibility
+    menuIcon.addEventListener('click', function() {
+        dropdownMenu.classList.toggle('hidden');
+    });
+
+    // Hide dropdown menu if clicked outside
+    document.addEventListener('click', function(e) {
+        if (!menuIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+
+    // Observer for link animations
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
